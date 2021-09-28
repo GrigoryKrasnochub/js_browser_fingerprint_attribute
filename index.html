@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BFP</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"></script>
+<script src="metrics.js"></script>
+<script src="libs/appDetect.js"></script>
+<script src="libs/privateDetect.js"></script>
+<script src="libs/browserDetect.js"></script>
+<script src="libs/portDetect.js"></script>
+<script src="libs/extensionDetect.js"></script>
+<script>
+  getMetrics().then(metrics=>{
+    console.log(metrics);
+    let metricTable = document.getElementById('idMetricsTable');
+    metricTable.style.display = 'table';
+    Object.keys(metrics).forEach(function (key) {
+      let metric = metrics[key];
+      if ( typeof metric === 'object') {
+        metric = JSON.stringify(metric);
+        metric = `<textarea cols="90" rows="3">${metric}</textarea>`
+      }
+      let row = metricTable.insertRow();
+      row.innerHTML = `<td>${key}</td><td>${metric}</td>`;
+    });
+  })
+</script>
+<body>
+<span>Hi! Let's check some metrics!</span>
+<table id="idMetricsTable" style="display: none">
+  <tr><th>Metric</th><th>Value</th></tr>
+</table>
+</body>
+</html>

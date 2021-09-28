@@ -1,1 +1,1 @@
-# js_browser_fingerprint_attribute
+# js_browser_fingerprint_attributes

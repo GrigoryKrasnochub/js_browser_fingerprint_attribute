@@ -66,7 +66,7 @@ Chrome browser url for fetch is:
 
 1. Parse it from store page
 2. Load .crx archive with extension (I used <a href="https://crxextractor.com/">crxextractor</a>)
-3. Open manifest.json (it's not zip, so use the special arhivator), looking for static files in "web_accessible_resources"
+3. Open archive and find manifest.json (it's not zip, so use the special arhivator), looking for static files in "web_accessible_resources"
 
 ### Ports detector
 
@@ -76,15 +76,15 @@ The idea is simple, try to get something from closed port and from open port, fe
 
 ### Private mode (Incognito) detector
 
-So I just google it and found several realization, this don't work with >Chrome 92, but works with others.
+So I just google it and found several realization, this don't work with < Chrome 92, but works with others.
 
 <a href="https://gist.github.com/jherax/a81c8c132d09cc354a0e2cb911841ff1">Almost full realization I found here</a>
 
-If you are intrested in story of incognito mode detection, you could read this <a href="https://fingerprintjs.com/blog/incognito-mode-detection/">article</a>. This article is not about how to do it now, but it's intresting. 
+If you are interested in story of incognito mode detection, you could read this <a href="https://fingerprintjs.com/blog/incognito-mode-detection/">article</a>. This article is not about how to do it now, but it's interesting.
 
 ### Browser detector
 
-It's just from StackOwerflow <a href="https://stackoverflow.com/a/9851769">thread</a>), and it's not work for actual chrome. 
+It's just from StackOwerflow <a href="https://stackoverflow.com/a/9851769">thread</a>), and it not works for actual chrome. 
 
 ## Check it with index.html
 

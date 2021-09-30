@@ -9,7 +9,7 @@ This scripts were written for dreamhack 3 competition in about 24 hours, so this
 
 - Base browser attributes: CPU threads, renderer, browser vendor, and much more (provided by fingerprintjs)
 - Desktop app (external protocol flooding vulnerability)
-- Browser extensions (browser pluggin) detector
+- Browser extensions (browser plugin) detector
 - Open ports
 - Private mode (Incognito mode detection)
 - Browser itself (Chrome, FireFox, Opera, etc.)
@@ -22,7 +22,7 @@ Every lib has this own func with promise, so if you need something specific, jus
 getFPJSLibDataPromise(); // Fingerprintjs data
 let detectApp = newDetectApp();
 detectApp.getUserApps(); // Desktop app detector
-getExtensions(); // Browser extensions (browser pluggin)
+getExtensions(); // Browser extensions (browser plugin)
 getOpenPorts(); // Open ports
 isPrivateMode(); // Private mode
 
